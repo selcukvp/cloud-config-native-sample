@@ -8,10 +8,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class GreetingController {
 
-  @Value("${greet.name}")
+  @Value("${greet.name:N/A}")
   private String greeting;
 
-  @Value("${config-client.magic-number}")
+  @Value("${config-client.magic-number:0}")
   private int magicNumber;
 
   @GetMapping("/greetings")
